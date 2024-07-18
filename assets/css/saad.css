@@ -1,0 +1,213 @@
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #778da9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; 
+}
+
+
+#header {
+  color: #caf0f8;
+  text-align: center;
+  padding: 10px; 
+  margin: 0;  
+  border: 2px solid #415a77; 
+  border-radius: 5px; 
+  font-size: 24px; 
+  line-height: 1.2; 
+  background-color: #1A237E; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; 
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #023047;
+}
+
+form {
+  width: 100%; 
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+form select,
+form input[type="number"],
+form textarea {
+  width: 100%; 
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #e0e1dd;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #03045e;
+  color: #fff;
+  border: 1px solid #000000; /* Add a border with a smaller width */
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+#submit, #button2, #button3 {
+  padding: 10px 20px;
+  background-color: rgb(226, 218, 218);
+  color: #fff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+form button:hover {
+  background-color: #ff8c00;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  height: 50px;  
+}
+.competence-item {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 5px; 
+}
+
+#competences-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.competence-item {
+  display: flex;
+  align-items: center;
+  background-color: #e0e0e0; 
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.competence-item input[type="checkbox"] {
+  margin-right: 10px; 
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  .competence-item {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  form select,
+  form input[type="number"],
+  form textarea {
+    font-size: 12px;
+  }
+  .competence-item {
+    flex: 0 0 100%; 
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none; /* Remove bullet points */
+}
+
+li, a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: bold;
+  color: blue;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+  background-color:transparent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto; /* Center the header */
+}
+
+.logo {
+  cursor: pointer;
+  width: 250px; /* Adjust logo size */
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+.navbar-nav li {
+  margin: 0 20px;
+}
+
+.navbar-nav li a {
+  padding: 10px 15px; /* Add padding for buttons */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-nav li a:hover {
+  color: #ffb703;
+  font-weight: bold;
+  background-color: darkblue; /* Background change on hover */
+  border-radius: 5px; /* Keep corners rounded */
+}
+
+.active a {
+  color:darkblue; 
+  font-weight: bold; 
+}
+
+
+

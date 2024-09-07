@@ -16,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["id"]) && !empty($_POST["id"])) {
         $id = $_POST["id"];
 
-        // Prepared statement to prevent SQL injection
         $stmt = $conn->prepare("DELETE FROM fiche_pst WHERE id = ?");
         $stmt->bind_param("i", $id);
 

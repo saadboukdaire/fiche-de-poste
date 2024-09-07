@@ -8,23 +8,23 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #001219; /* Dark blue */
+            background-color: #001219; 
             margin: 0;
             padding: 0;
-            color: #E9D8A6; /* Light gold for text */
+            color: #E9D8A6; 
         }
         .container {
             width: 80%;
             max-width: 800px;
             margin: 20px auto;
-            background-color: #005F73; /* Blue-green */
+            background-color: #005F73;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             padding: 20px;
             border-radius: 5px;
         }
         .header {
-            background-color: #0A9396; /* Teal */
-            color: #E9D8A6; /* Light gold */
+            background-color: #0A9396;
+            color: #E9D8A6; 
             padding: 10px;
             text-align: center;
             margin-top: 0;
@@ -42,8 +42,8 @@
             display: inline-block;
             padding: 10px 20px;
             margin-top: 10px;
-            background-color: #94D2BD; /* Light green */
-            color: #001219; /* Dark blue */
+            background-color: #94D2BD;
+            color: #001219; 
             text-decoration: none;
             border: none;
             cursor: pointer;
@@ -51,14 +51,14 @@
             transition: background-color 0.3s, color 0.3s;
         }
         .pdf-button:hover, .back-button:hover {
-            background-color: #0A9396; /* Teal */
-            color: #E9D8A6; /* Light gold */
+            background-color: #0A9396;
+            color: #E9D8A6;
         }
         .button-container {
             text-align: center;
         }
         .pdf-button i {
-            margin-right: 5px; /* Adjust spacing between icon and text */
+            margin-right: 5px; 
         }
     </style>
 </head>

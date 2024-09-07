@@ -186,12 +186,12 @@ if ($competences->num_rows > 0) {
   const competencyItems = competenciesContainer.getElementsByClassName("competence-item");
   const relevantCompetencies = jobCompetencies[selectedPoste] || [];
 
-  // Hide all competency items first
+
   for (let item of competencyItems) {
     item.style.display = "none";
   }
 
-  // Show relevant competencies
+ 
   relevantCompetencies.forEach(comp => {
     for (let item of competencyItems) {
       if (item.dataset.name === comp) {
@@ -201,7 +201,7 @@ if ($competences->num_rows > 0) {
   });
 }
 
-    // Initialize competencies on page load
+    
     document.addEventListener("DOMContentLoaded", updateCompetencies);
     
   </script>
@@ -244,7 +244,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if (empty($comp)) {
     $errors[] = "Vous devez sélectionner au moins une compétence.";
 } else {
-    // If not empty, implode the array to store in the database
+    
     $comp_str = implode(', ', array_map([$conn, 'real_escape_string'], $comp));
 }
 

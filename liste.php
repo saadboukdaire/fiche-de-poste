@@ -71,6 +71,7 @@ if ($result->num_rows > 0) {
     <table>
         <tr style="background-color: #03045e; color: white;">
             <th style="border:none; padding: 10px; text-align: left;">Titre_poste</th>
+            <th style="border:none; padding: 10px; text-align: left; width: 20%;">Description</th>
             <th style="border:none; padding: 10px; text-align: left;">Niveau_education</th>
             <th style="border: none; padding: 10px; text-align: left;">Experience</th>
             <th style="border: none; padding: 10px; text-align: left; width: 50%;">Compétences</th>
@@ -88,6 +89,21 @@ if ($result->num_rows > 0) {
             ?>
             <tr style="background-color: <?php echo $row_color; ?>; color: #caf0f8;">
                 <td style="border: none; padding: 10px;"><?php echo $row["Titre_poste"]; ?></td>
+                <td style="border: none; padding: 10px; max-width: 200px;">
+    <div class="description-container">
+        <?php
+        $description = $row["Description"];
+        $short_description = substr($description, 0, 50); // Limitez à 100 caractères
+        $is_long_description = strlen($description) > 50;
+        ?>
+        <span class="short-description"><?php echo $short_description; ?><?php if ($is_long_description) { echo '...'; } ?></span>
+        <?php if ($is_long_description) { ?>
+            <span class="long-description" style="display: none;"><?php echo $description; ?></span>
+            <a href="#" class="toggle-description">Voir plus</a>
+        <?php } ?>
+    </div>
+</td>
+
                 <td style="border: none; padding: 10px;"><?php echo $row["Niveau_education"]; ?></td>
                 <td style="border: none; padding: 10px;"><?php echo $row["Experience"]; ?></td>
                 <td style="border: none; padding: 10px; width: 50%;">
@@ -142,12 +158,31 @@ if ($result->num_rows > 0) {
                     moreText.style.display = 'inline';
                     toggle.textContent = 'Afficher moins';
                 } else {
-                    competencesDiv.style.maxHeight = '50px'; // Adjust the height here
+                    competencesDiv.style.maxHeight = '50px'; 
                     moreText.style.display = 'none';
                     toggle.textContent = 'Afficher plus';
                 }
             });
         });
+        document.querySelectorAll('.toggle-description').forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const descriptionContainer = toggle.parentElement;
+        const shortDescription = descriptionContainer.querySelector('.short-description');
+        const longDescription = descriptionContainer.querySelector('.long-description');
+
+        if (longDescription.style.display === 'none') {
+            shortDescription.style.display = 'none';
+            longDescription.style.display = 'inline';
+            toggle.textContent = 'Voir moins';
+        } else {
+            shortDescription.style.display = 'inline';
+            longDescription.style.display = 'none';
+            toggle.textContent = 'Voir plus';
+        }
+    });
+});
+
     </script>
 
     <?php

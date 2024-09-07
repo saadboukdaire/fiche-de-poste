@@ -19,8 +19,7 @@ $francais = '';
 $anglais = '';
 $arabe = '';
 $ville = '';
-$error_message = ''; // Variable to store error message
-
+$error_message = ''; 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
     $id = $_POST['id'];
 
